@@ -1,25 +1,26 @@
 //
-//  ViewController.swift
+//  MoviesListVC.swift
 //  MoviePreview
 //
-//  Created by Osama Arshad on 24/08/2023.
+//  Created by Osama Arshad on 25/08/2023.
 //
 
 import UIKit
-import Alamofire
-class ViewController: UIViewController {
+
+class MoviesListVC: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     let apiManager = APIManager()
     var pageNumber = "1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        callData()
+        fetchData()
     }
 
-    func callData(){
+    func fetchData(){
         
         let parameters:[String:String] = ["language": "en-US",
                           "page":pageNumber]
