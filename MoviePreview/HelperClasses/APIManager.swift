@@ -35,6 +35,36 @@ class APIManager {
         
     }
     
+    
+    func movieDetails(movieId: String,
+                        completionHandler: @escaping (MovieDetails?,Error?) -> Void) -> Void {
+        
+        var headers:[String: String] = [
+          "accept": "application/json",
+          "Authorization": "Bearer \(Constants.apiAuthorization)"
+        ]
+        
+        let httpHeaders = HTTPHeaders(headers)
+        
+        
+        
+        let url = URL(string: "\(Constants.movieDetailsUrl)\(movieId)")!
+        print(url)
+        AF.request(url,method: .get,headers: httpHeaders).response { response in
+            if let data = response.data{
+                print(data)
+                let movieList = try? JSONDecoder().decode(MovieDetails.self, from: data)
+                    print("IN")
+                    print(movieList)
+                    completionHandler(movieList,nil)
+                    
+            }else{
+                completionHandler(nil,response.error)
+            }
+           }
+        
+    }
+    
 
 }
 

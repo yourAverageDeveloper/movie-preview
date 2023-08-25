@@ -14,5 +14,6 @@ class Constants{
     
     static let imageBaseUrl = "https://image.tmdb.org/t/p/w1280"
     static let popularMoviesUrl = "https://api.themoviedb.org/3/movie/popular"
+    static let movieDetailsUrl = "https://api.themoviedb.org/3/movie/"
     
 }

@@ -23,6 +23,7 @@
 		B72BFB142A980DA800AEE19D /* Conenctivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB132A980DA800AEE19D /* Conenctivity.swift */; };
 		B72BFB182A981E0D00AEE19D /* MoviesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB162A981E0D00AEE19D /* MoviesListCell.swift */; };
 		B72BFB1B2A981F4500AEE19D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB1A2A981F4500AEE19D /* UIView.swift */; };
+		B72BFB1D2A98322C00AEE19D /* MovieDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB1C2A98322C00AEE19D /* MovieDetailsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B72BFB132A980DA800AEE19D /* Conenctivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conenctivity.swift; sourceTree = "<group>"; };
 		B72BFB162A981E0D00AEE19D /* MoviesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListCell.swift; sourceTree = "<group>"; };
 		B72BFB1A2A981F4500AEE19D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B72BFB1C2A98322C00AEE19D /* MovieDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				B72BFB0B2A97F9A600AEE19D /* Constants.swift */,
 				B72BFB0D2A97FBED00AEE19D /* GenreModel.swift */,
 				B72BFB0F2A97FCDD00AEE19D /* MoviesListModel.swift */,
+				B72BFB1C2A98322C00AEE19D /* MovieDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				B72BFB122A9800CC00AEE19D /* APIManager.swift in Sources */,
 				B72BFAEB2A978F4F00AEE19D /* AppDelegate.swift in Sources */,
 				B72BFAED2A978F4F00AEE19D /* SceneDelegate.swift in Sources */,
+				B72BFB1D2A98322C00AEE19D /* MovieDetailsModel.swift in Sources */,
 				B72BFB142A980DA800AEE19D /* Conenctivity.swift in Sources */,
 				B72BFB032A97F6AB00AEE19D /* MoviesDetailsVC.swift in Sources */,
 				B72BFB102A97FCDD00AEE19D /* MoviesListModel.swift in Sources */,

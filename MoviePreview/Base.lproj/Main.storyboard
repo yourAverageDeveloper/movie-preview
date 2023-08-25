@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="MoviesListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoviesListCell" rowHeight="189" id="THy-op-ich" customClass="MoviesListCell" customModule="MoviePreview" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="MoviesListCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="MoviesListCell" rowHeight="189" id="THy-op-ich" customClass="MoviesListCell" customModule="MoviePreview" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="189"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="THy-op-ich" id="XxF-fc-FAN">
@@ -32,19 +32,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-Wi-PUU">
                                                     <rect key="frame" x="20" y="10" width="343" height="169"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="mYV-Cl-QQR">
-                                                            <rect key="frame" x="13" y="10" width="116" height="144"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="mYV-Cl-QQR">
+                                                            <rect key="frame" x="10" y="10" width="120" height="149"/>
                                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="QaM-sp-VKJ"/>
+                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUU-8K-COA">
-                                                            <rect key="frame" x="157" y="14" width="42" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUU-8K-COA">
+                                                            <rect key="frame" x="140" y="9.9999999999999982" width="193" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -79,7 +80,13 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="mYV-Cl-QQR" secondAttribute="bottom" constant="10" id="01G-0p-UCR"/>
+                                                        <constraint firstItem="sUU-8K-COA" firstAttribute="top" secondItem="Ake-Wi-PUU" secondAttribute="top" constant="10" id="6dc-gn-6xG"/>
+                                                        <constraint firstItem="mYV-Cl-QQR" firstAttribute="top" secondItem="Ake-Wi-PUU" secondAttribute="top" constant="10" id="9ue-0a-6vZ"/>
                                                         <constraint firstAttribute="height" constant="160" id="IIl-5a-FyZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sUU-8K-COA" secondAttribute="trailing" constant="10" id="VvA-4m-RvA"/>
+                                                        <constraint firstItem="mYV-Cl-QQR" firstAttribute="leading" secondItem="Ake-Wi-PUU" secondAttribute="leading" constant="10" id="dCh-GO-LF0"/>
+                                                        <constraint firstItem="sUU-8K-COA" firstAttribute="leading" secondItem="mYV-Cl-QQR" secondAttribute="trailing" constant="10" id="eXl-XI-NCP"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -127,15 +134,34 @@
             </objects>
             <point key="canvasLocation" x="125.95419847328243" y="3.5211267605633805"/>
         </scene>
-        <!--Movies DetailsVC-->
+        <!--MoviesDetailsVC-->
         <scene sceneID="I6R-M6-TLn">
             <objects>
-                <viewController id="5A1-DP-Ac9" customClass="MoviesDetailsVC" customModule="MoviePreview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviesDetailsVC" title="MoviesDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5A1-DP-Ac9" customClass="MoviesDetailsVC" customModule="MoviePreview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hD-Qc-zyA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1h-XT-KzU">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="cE0-PG-9mt"/>
+                                    <constraint firstAttribute="width" constant="200" id="rBK-FY-tts"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="5A1-DP-Ac9" eventType="touchUpInside" id="OSu-Va-Dkt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="phd-Fh-Q7K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O1h-XT-KzU" firstAttribute="centerX" secondItem="4hD-Qc-zyA" secondAttribute="centerX" id="U2m-dS-50i"/>
+                            <constraint firstItem="O1h-XT-KzU" firstAttribute="centerY" secondItem="4hD-Qc-zyA" secondAttribute="centerY" id="qgL-a5-iz6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkM-ZU-Htv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -152,6 +178,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
