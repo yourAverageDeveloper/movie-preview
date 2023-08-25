@@ -22,10 +22,11 @@ class APIManager {
         
         let httpHeaders = HTTPHeaders(headers)
         
-        headers.merge(parameters) { (_, new) in new }
+        //headers.merge(parameters) { (_, new) in new }
         
         let url = URL(string: Constants.popularMoviesUrl)!
-        AF.request(url,method: .get,headers: httpHeaders).response { response in
+        AF.request(url,method: .get,parameters:parameters, headers: httpHeaders).response { response in
+            dump(response)
             if let data = response.data{
                 let movieList = try? JSONDecoder().decode(MoviesList.self, from: data)
                     completionHandler(movieList,nil)
