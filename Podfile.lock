@@ -1,12 +1,16 @@
 PODS:
   - Alamofire (5.7.1)
   - ProgressHUD (13.7.2)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
   - ShadowView (1.4.3)
   - UIGradient (1.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - ProgressHUD
+  - SDWebImage (~> 5.0)
   - ShadowView
   - UIGradient
 
@@ -14,15 +18,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ProgressHUD
+    - SDWebImage
     - ShadowView
     - UIGradient
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   ProgressHUD: 093d24ca970f191744017bee2649e37d0cd1c5b9
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   ShadowView: d2d92fd2706b3f6a182be2147149db0b1cf7700d
   UIGradient: 2364e9ebac232686db220713b4d42a68222fffb2
 
-PODFILE CHECKSUM: 857216a98be48020b476e78a1c66e4c4fae39f91
+PODFILE CHECKSUM: 797c50a1c521028e88784c1b8dea9f7df2bac8d3
 
 COCOAPODS: 1.12.1

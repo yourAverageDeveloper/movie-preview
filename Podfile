@@ -9,6 +9,7 @@ target 'MoviePreview' do
   pod 'ProgressHUD'
   pod 'UIGradient'
   pod 'ShadowView'
+  pod 'SDWebImage', '~> 5.0'
   
 
   # Pods for MoviePreview
