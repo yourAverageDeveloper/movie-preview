@@ -8,6 +8,7 @@
 import UIKit
 import ProgressHUD
 import SDWebImage
+import UIGradient
 
 class MoviesDetailsVC: UIViewController {
     
@@ -18,6 +19,7 @@ class MoviesDetailsVC: UIViewController {
     
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    
     var movieId:String = ""
     var movieObject: MovieDetails?
     let apiManager = APIManager()
@@ -26,6 +28,9 @@ class MoviesDetailsVC: UIViewController {
         super.viewDidLoad()
         
         fetchData()
+        
+        view.backgroundColor = UIColor.fromGradientWithDirection(.bottomLeftToTopRight, frame: view.frame, colors: [UIColor(named: "backgroundColor")!,UIColor(named: "gradient")!])
+
         
     }
     
@@ -74,9 +79,18 @@ class MoviesDetailsVC: UIViewController {
             self.genreLabel.text = movieObject?.genres[0].name
         }
         
+        if (movieObject?.title != nil){
+            self.titleLabel.text = movieObject?.title
+        }
         
-        
-        
+        if (movieObject?.overview != nil){
+            self.synopsisLabel.text = movieObject?.overview
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+                    paragraphStyle.lineSpacing = 12 // Adjust the value as needed
+            let attributedString = NSAttributedString(string: self.synopsisLabel.text ?? "", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+            self.synopsisLabel.attributedText = attributedString
+        }
         
     }
     

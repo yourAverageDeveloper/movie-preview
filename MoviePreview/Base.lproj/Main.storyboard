@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,7 +77,7 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" name="gradient"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="mYV-Cl-QQR" secondAttribute="bottom" constant="10" id="01G-0p-UCR"/>
                                                         <constraint firstItem="sUU-8K-COA" firstAttribute="top" secondItem="Ake-Wi-PUU" secondAttribute="top" constant="10" id="6dc-gn-6xG"/>
@@ -99,6 +98,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <viewLayoutGuide key="safeArea" id="0Fk-p1-YDB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="cardView" destination="Ake-Wi-PUU" id="dFH-mO-dHD"/>
                                             <outlet property="posterImageView" destination="mYV-Cl-QQR" id="4cz-ob-2eE"/>
@@ -163,12 +163,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-IO-tQW">
-                                <rect key="frame" x="20" y="121.33333333333331" width="230" height="356"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <rect key="frame" x="20" y="121.33333333333331" width="238" height="356"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="SubheadingColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="356" id="507-rh-gwP"/>
-                                    <constraint firstAttribute="width" constant="230" id="prW-vy-P96"/>
+                                    <constraint firstAttribute="width" constant="238" id="prW-vy-P96"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -310,25 +310,35 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiS-QU-Faq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiS-QU-Faq">
                                 <rect key="frame" x="20" y="499.99999999999994" width="353" height="31.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <color key="textColor" name="HeadingColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGD-F8-Fke">
-                                <rect key="frame" x="20" y="664" width="353" height="31.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                <color key="textColor" name="HeadingColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGD-F8-Fke">
+                                <rect key="frame" x="20" y="580.33333333333337" width="353" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" name="SubheadingColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVY-MS-QCa">
+                                <rect key="frame" x="20" y="555.33333333333337" width="353" height="1"/>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.31372549019607843" alpha="0.70434736394557829" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ydL-NF-1A3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="phd-Fh-Q7K"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
+                            <constraint firstItem="phd-Fh-Q7K" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LGD-F8-Fke" secondAttribute="bottom" constant="20" id="4ro-ox-5Yj"/>
+                            <constraint firstItem="eVY-MS-QCa" firstAttribute="leading" secondItem="phd-Fh-Q7K" secondAttribute="leading" constant="20" id="6pG-hl-Ezn"/>
+                            <constraint firstItem="phd-Fh-Q7K" firstAttribute="trailing" secondItem="LGD-F8-Fke" secondAttribute="trailing" constant="20" id="BIk-HW-ioH"/>
                             <constraint firstItem="O1h-XT-KzU" firstAttribute="centerY" secondItem="jCf-Sm-uez" secondAttribute="centerY" id="C0s-Rv-6Yi"/>
                             <constraint firstItem="mTg-IO-tQW" firstAttribute="top" secondItem="O1h-XT-KzU" secondAttribute="bottom" constant="25" id="EVD-dV-5uF"/>
+                            <constraint firstItem="eVY-MS-QCa" firstAttribute="top" secondItem="hiS-QU-Faq" secondAttribute="bottom" constant="24" id="J7E-QK-x7V"/>
                             <constraint firstItem="phd-Fh-Q7K" firstAttribute="trailing" secondItem="1rg-5W-fQr" secondAttribute="trailing" constant="28" id="JN8-bw-bxT"/>
                             <constraint firstItem="O1h-XT-KzU" firstAttribute="leading" secondItem="phd-Fh-Q7K" secondAttribute="leading" constant="25" id="L4v-Xe-zOH"/>
                             <constraint firstItem="jCf-Sm-uez" firstAttribute="top" secondItem="phd-Fh-Q7K" secondAttribute="top" constant="5" id="VcY-U2-3BZ"/>
@@ -336,8 +346,11 @@
                             <constraint firstItem="mTg-IO-tQW" firstAttribute="leading" secondItem="phd-Fh-Q7K" secondAttribute="leading" constant="20" id="Wf5-F3-llA"/>
                             <constraint firstItem="jCf-Sm-uez" firstAttribute="centerX" secondItem="4hD-Qc-zyA" secondAttribute="centerX" id="fXX-um-CQT"/>
                             <constraint firstItem="hiS-QU-Faq" firstAttribute="leading" secondItem="mTg-IO-tQW" secondAttribute="leading" id="gLV-FE-WuR"/>
+                            <constraint firstItem="LGD-F8-Fke" firstAttribute="leading" secondItem="phd-Fh-Q7K" secondAttribute="leading" constant="20" id="h82-BK-7rm"/>
+                            <constraint firstItem="LGD-F8-Fke" firstAttribute="top" secondItem="eVY-MS-QCa" secondAttribute="bottom" constant="24" id="jgL-gb-OLp"/>
                             <constraint firstItem="hiS-QU-Faq" firstAttribute="top" secondItem="mTg-IO-tQW" secondAttribute="bottom" constant="22.666666666666686" id="pkQ-3v-k1M"/>
                             <constraint firstItem="phd-Fh-Q7K" firstAttribute="trailing" secondItem="hiS-QU-Faq" secondAttribute="trailing" constant="20" id="u7c-bX-L8P"/>
+                            <constraint firstItem="phd-Fh-Q7K" firstAttribute="trailing" secondItem="eVY-MS-QCa" secondAttribute="trailing" constant="20" id="zdD-sQ-qEZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -370,11 +383,8 @@
         <namedColor name="backgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="gradient">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

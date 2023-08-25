@@ -63,7 +63,7 @@ extension MoviesListVC: UITableViewDelegate,UITableViewDataSource{
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesListCell", for: indexPath) as? MoviesListCell{
             
-            cell.titleLabel.text = listOfMovies[indexPath.row].title
+            cell.UIActions(data: listOfMovies[indexPath.row])
             return cell
         }
         

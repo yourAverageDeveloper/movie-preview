@@ -28,6 +28,12 @@ class MoviesListCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
+    func UIActions(data:Result){
+        self.cardView.layer.cornerRadius = 10
+        self.titleLabel.text = data.title
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
