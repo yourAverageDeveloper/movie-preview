@@ -17,6 +17,9 @@ class MoviesListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         fetchData()
     }
 
@@ -35,4 +38,25 @@ class MoviesListVC: UIViewController {
         
     }
 
+}
+
+
+
+
+extension MoviesListVC: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesListCell", for: indexPath) as? MoviesListCell{
+            return cell
+        }
+        
+        return UITableViewCell()
+
+    }
+    
+    
 }

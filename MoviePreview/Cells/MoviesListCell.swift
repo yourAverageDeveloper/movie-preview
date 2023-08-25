@@ -10,6 +10,20 @@ import UIKit
 class MoviesListCell: UITableViewCell {
 
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
+    @IBOutlet weak var starOneView: UIImageView!
+    
+    @IBOutlet weak var starTwoView: UIImageView!
+    
+    @IBOutlet weak var starthreeView: UIImageView!
+    
+    @IBOutlet weak var starFourView: UIImageView!
+    
+    @IBOutlet weak var starFiveView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
