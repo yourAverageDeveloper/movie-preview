@@ -6,23 +6,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MoviesListCell: UITableViewCell {
 
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
-    
     @IBOutlet weak var starOneView: UIImageView!
     
-    @IBOutlet weak var starTwoView: UIImageView!
-    
-    @IBOutlet weak var starthreeView: UIImageView!
-    
-    @IBOutlet weak var starFourView: UIImageView!
-    
-    @IBOutlet weak var starFiveView: UIImageView!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +25,14 @@ class MoviesListCell: UITableViewCell {
     
     func UIActions(data:Result){
         self.cardView.layer.cornerRadius = 10
-        self.titleLabel.text = data.title
+        let year =  String(data.releaseDate.prefix(4))
+        self.titleLabel.text = "\(data.title) (\(year))"
+        self.ratingLabel.text = String(data.voteAverage)
+        
+        
+        posterImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        posterImageView.sd_setImage(with: URL(string: "\(Constants.imageBaseUrl)\(data.posterPath )"))
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

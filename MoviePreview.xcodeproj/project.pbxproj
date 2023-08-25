@@ -25,6 +25,7 @@
 		B72BFB1B2A981F4500AEE19D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB1A2A981F4500AEE19D /* UIView.swift */; };
 		B72BFB1D2A98322C00AEE19D /* MovieDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB1C2A98322C00AEE19D /* MovieDetailsModel.swift */; };
 		B72BFB1F2A985D2800AEE19D /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB1E2A985D2800AEE19D /* ShadowImageView.swift */; };
+		B72BFB212A986A2C00AEE19D /* TwoImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFB202A986A2C00AEE19D /* TwoImagesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		B72BFB1A2A981F4500AEE19D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B72BFB1C2A98322C00AEE19D /* MovieDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsModel.swift; sourceTree = "<group>"; };
 		B72BFB1E2A985D2800AEE19D /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
+		B72BFB202A986A2C00AEE19D /* TwoImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoImagesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B72BFB162A981E0D00AEE19D /* MoviesListCell.swift */,
+				B72BFB202A986A2C00AEE19D /* TwoImagesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				B72BFB0E2A97FBED00AEE19D /* GenreModel.swift in Sources */,
 				B72BFB1B2A981F4500AEE19D /* UIView.swift in Sources */,
 				B72BFB122A9800CC00AEE19D /* APIManager.swift in Sources */,
+				B72BFB212A986A2C00AEE19D /* TwoImagesCell.swift in Sources */,
 				B72BFAEB2A978F4F00AEE19D /* AppDelegate.swift in Sources */,
 				B72BFAED2A978F4F00AEE19D /* SceneDelegate.swift in Sources */,
 				B72BFB1D2A98322C00AEE19D /* MovieDetailsModel.swift in Sources */,

@@ -13,6 +13,8 @@ class APIManager {
     func popularMovies(parameters: [String:String],
                         completionHandler: @escaping (MoviesList?,Error?) -> Void) -> Void {
         
+        print(parameters)
+        
         var headers:[String: String] = [
           "accept": "application/json",
           "Authorization": "Bearer \(Constants.apiAuthorization)"
